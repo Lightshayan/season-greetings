@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f0f8ff;
+            background: linear-gradient(to bottom, #f0f8ff, #dcdcdc);
             color: #333;
             margin: 0;
             padding: 0;
@@ -19,20 +19,23 @@
         }
 
         header {
-            background-color: #8b0000;
+            background: linear-gradient(to right, #8b0000, #d32f2f);
             color: #fff;
             padding: 20px;
             width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         header h1 {
             margin: 0;
+            animation: fadeIn 2s ease-in-out;
         }
 
         main {
             padding: 20px;
             width: 90%;
             max-width: 800px;
+            animation: fadeInUp 2s ease-in-out;
         }
 
         .greeting {
@@ -41,29 +44,67 @@
             border-radius: 10px;
             margin: 20px 0;
             padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: scale(1);
+            transition: transform 0.3s;
+        }
+
+        .greeting:hover {
+            transform: scale(1.05);
         }
 
         .decorations img {
             margin: 10px;
             border: 2px solid #8b0000;
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .decorations img:hover {
+            transform: scale(1.1);
         }
 
         footer {
-            background-color: #8b0000;
+            background: linear-gradient(to right, #8b0000, #d32f2f);
             color: #fff;
             padding: 10px;
             width: 100%;
             position: fixed;
             bottom: 0;
             text-align: center;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        /* Snowflake animation */
+        /* Keyframes for animations */
         @keyframes snow {
             0% { transform: translateY(-10px) rotate(0deg); }
             50% { transform: translateY(50vh) rotate(180deg); }
             100% { transform: translateY(100vh) rotate(360deg); }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes flyAndDisappear {
+            0% { transform: translateX(100vw) translateY(0); opacity: 1; }
+            50% { transform: translateX(50vw) translateY(-20vh); opacity: 1; }
+            100% { transform: translateX(0) translateY(-40vh); opacity: 0; }
+        }
+
+        .santa {
+            position: absolute;
+            top: 10px;
+            left: -100px;
+            width: 150px;
+            animation: flyAndDisappear 10s linear infinite;
         }
 
         .snowflake {
@@ -108,6 +149,8 @@
         <p>&copy; 2024 Christmas Cheer. All rights reserved.</p>
     </footer>
 
+    <img class="santa" src="https://th.bing.com/th/id/OIP.mtvUgbq4qaiOHCMWHdpywQHaEo?rs=1&pid=ImgDetMain" alt="Santa Claus">
+
     <!-- Snowflakes -->
     <script>
         function createSnowflake() {
@@ -130,3 +173,4 @@
     </script>
 </body>
 </html>
+
