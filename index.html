@@ -7,64 +7,78 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f2f2f2;
+            background-color: #f0f8ff;
             color: #333;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
         header {
-            background-color: #d32f2f;
+            background-color: #8b0000;
             color: #fff;
-            text-align: center;
-            padding: 1rem 0;
+            padding: 20px;
+            width: 100%;
         }
 
         header h1 {
-            font-size: 2.5rem;
             margin: 0;
-        }
-
-        header p {
-            font-size: 1.25rem;
-            margin: 0.5rem 0;
         }
 
         main {
-            padding: 2rem;
-            text-align: center;
+            padding: 20px;
+            width: 90%;
+            max-width: 800px;
         }
 
-        .about, .gallery {
-            margin: 2rem 0;
+        .greeting {
+            background-color: #ffebcd;
+            border: 2px solid #8b0000;
+            border-radius: 10px;
+            margin: 20px 0;
+            padding: 20px;
         }
 
-        .gallery img {
-            width: 200px;
-            height: auto;
-            margin: 1rem;
-            border: 5px solid #d32f2f;
+        .decorations img {
+            margin: 10px;
+            border: 2px solid #8b0000;
+            border-radius: 10px;
         }
 
         footer {
-            background-color: #d32f2f;
+            background-color: #8b0000;
             color: #fff;
+            padding: 10px;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
             text-align: center;
-            padding: 1rem 0;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 1rem;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to Christmas Cheer!</h1>
-        <p>Spread the joy of the holiday season with us!</p>
+        <h1>Happy Holidays!</h1>
     </header>
     <main>
-        <section class="about">
-            <h2>About Christmas</h2>
-            <p
+        <section class="greeting">
+            <h2>Season's Greetings!</h2>
+            <p>Wishing you a holiday filled with warmth, joy, and good cheer.</p>
+        </section>
+        <section class="decorations">
+            <img src="https://pixabay.com/images/christmas-tree-12345.jpg" alt="Christmas Tree">
+            <img src="https://pixabay.com/images/holiday-lights-67890.jpg" alt="Holiday Lights">
+        </section>
+        <section class="message">
+            <p>May your days be merry and bright!</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Christmas Cheer. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
